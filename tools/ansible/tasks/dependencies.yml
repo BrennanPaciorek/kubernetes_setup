@@ -1,0 +1,22 @@
+---
+- name: install kubernetes yum repository
+  ansible.builtin.copy:
+    src: files/kubernetes.repo
+    dest: /etc/yum.repos.d/kubernetes.repo
+
+- name: install kubelet
+  ansible.builtin.package:
+    name: kubelet
+    state: present
+
+- name: install kubeadm
+  ansible.builtin.package:
+    name: kubeadm
+    state: present
+
+- name: install kubectl
+  ansible.builtin.package:
+    name: kubectl
+    state: present
+
+...

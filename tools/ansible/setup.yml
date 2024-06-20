@@ -1,0 +1,8 @@
+---
+- name: Setup Kubernetes
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install dependencies
+      import_tasks: tasks/dependencies.yml
+...

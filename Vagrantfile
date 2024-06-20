@@ -81,6 +81,6 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "tools/ansible/install_dependencies.yml"
+    ansible.playbook = "tools/ansible/setup.yml"
   end
 end
