@@ -27,16 +27,9 @@ On Fedora
 # usermod -aG libvirt <your-username> # if you want to run vagrant rootless
 ```
 
-## Vagrant
-### Vagrant plugins
+## Setup Vagrant
 
-- vagrant-libvirt
+For quick setup, use `make vagrant-setup`. This will install the necessary plugins and boxes.
 
-```
-vagrant plugin add vagrant-libvirt
-```
+The current vagrant setup only works with the libvirt provider.
 
-### Vagrant box
-
-The link redirect from vagrant cloud 404s for centos/stream9 so the image needs to be pulled by url
-`vagrant box add https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20230704.1.x86_64.vagrant-libvirt.box --name centos/stream9`
