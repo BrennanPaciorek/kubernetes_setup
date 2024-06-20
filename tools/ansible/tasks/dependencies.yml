@@ -1,8 +1,18 @@
 ---
-- name: install kubernetes yum repository
+- name: Install Kubernetes repo
   ansible.builtin.copy:
     src: files/kubernetes.repo
     dest: /etc/yum.repos.d/kubernetes.repo
+
+- name: Install CRI-O repo
+  ansible.builtin.copy:
+    src: files/cri-o.repo
+    dest: /etc/yum.repos.d/cri-o.repo
+
+- name: Install CRI-O
+  ansible.builtin.package:
+    name: cri-o
+    state: present
 
 - name: install kubelet
   ansible.builtin.package:
