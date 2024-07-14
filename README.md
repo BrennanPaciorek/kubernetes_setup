@@ -1,6 +1,10 @@
-# Prerequisites
+# Kubernetes VM
 
-All currently useful prerequisites as well as intended future ones.
+Intends to provide a kubernetes single-node setup using Vagrant to provision the VM and ansible to configure it.
+
+All of the configuration management is done via playbooks in `tools/ansible`.
+
+# Prerequisites
 
 ## Packages
 

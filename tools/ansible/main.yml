@@ -5,6 +5,6 @@
   tasks:
     - name: Install dependencies
       import_tasks: tasks/dependencies.yml
-    - name: start systemd units
-      import_tasks: tasks/config.yml
+    - name: configure and startup services
+      import_tasks: tasks/startup.yml
 ...

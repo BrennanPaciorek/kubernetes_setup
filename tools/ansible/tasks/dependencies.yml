@@ -1,12 +1,13 @@
 ---
+
 - name: Install Kubernetes repo
   ansible.builtin.copy:
-    src: files/kubernetes.repo
+    src: files/repos/kubernetes.repo
     dest: /etc/yum.repos.d/kubernetes.repo
 
 - name: Install CRI-O repo
   ansible.builtin.copy:
-    src: files/cri-o.repo
+    src: files/repos/cri-o.repo
     dest: /etc/yum.repos.d/cri-o.repo
 
 - name: Install CRI-O
